@@ -1,0 +1,57 @@
+/* 基本 */
+:root { --bg:#f7f7fb; --card:#ffffff; --muted:#666; }
+* { box-sizing: border-box; }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: var(--bg);
+  color: #222;
+}
+
+/* ヘッダー */
+.site-header {
+  max-width: 900px;
+  margin: 0 auto 16px auto;
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+.site-header h1 { margin:0; font-size:1.25rem; }
+#search {
+  margin-left:auto;
+  padding:8px 12px;
+  border:1px solid #ddd;
+  border-radius:8px;
+  min-width:200px;
+}
+
+/* メイン */
+.container { max-width:900px; margin:0 auto; }
+.event-card {
+  background: var(--card);
+  padding:12px;
+  border-radius:10px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+  margin-bottom:12px;
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+}
+.event-date {
+  min-width:92px;
+  font-weight:700;
+  color:#444;
+}
+.event-body h2 { margin:0 0 6px 0; font-size:1rem; }
+.event-meta { font-size:0.9rem; color:var(--muted); }
+
+/* footer */
+.site-footer { text-align:center; color:var(--muted); margin-top:18px; }
+
+/* レスポンシブ */
+@media (max-width:600px) {
+  .site-header { flex-direction:column; align-items:stretch; }
+  .event-card { flex-direction:column; }
+  #search { margin-left:0; width:100%; }
+}
